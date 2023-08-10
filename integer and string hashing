@@ -1,0 +1,38 @@
+# -------------------------------------------------------------------->Hashing integers<--------------------------------------------------------------------------------
+
+# step1--> initialize an array with zeroes with size of maximum element in list 
+# step2-->increase the value in hash array with repeating values in list
+# step3-->you will get the number of times that element is repeated just by returning the value at the target element's index
+# Note:---------------------------->Hashing will work upto 1e6 if you declare hasing inside main funcion and it will goes upto 1e7 if you declare it globally<------------
+
+a=[1,2,2,2,1,4,5,6,6,6,3]
+t=6
+p=max(a)
+x=(p+1)*[0]
+for i in range(len(a)):
+    x[a[i]]+=1
+print(x[t])
+
+# -------------------------------------------------------------------->Hashing Characters model-1<--------------------------------------------------------------------------------
+
+#step1-->initialize an array with number of lowercase alphabets ie 26
+#step2-->we will get the value of index just by subtracting the ascii value of character with the ascii value of a
+#step3-->return the value in hashtable by subtracting ascii value of element with ascii value of a
+
+ii="aaabbachd"
+t='a'
+x=26*[0]
+for i in range(len(ii)):
+    x[ord(ii[i])-97]+=1
+print(x[ord(t)-97])
+
+# -------------------------------------------------------------------->Hashing Characters model-2<--------------------------------------------------------------------------------
+
+#step1-->initialize an array with number of lowercase alphabets ie 26
+#step2->follow steps for hashing of integers
+ii="aaabbachd"
+t='a'
+x=256*[0]
+for i in range(len(ii)):
+    x[ord(ii[i])]+=1
+print(x[ord(t)])
